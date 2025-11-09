@@ -1,9 +1,17 @@
 vim.lsp.config("lua_ls", {
-	settings = {
-		diagnostics = {
-			globals = { "vim" },
-		},
-	},
+    settings = {
+        Lua = {
+            runtime = {
+                version = "LuaJIT",
+            },
+            diagnostics = {
+                globals = { "vim" },
+            },
+            telemetry = {
+                enabled = false,
+            },
+        },
+    },
 })
 
 vim.lsp.enable("lua_ls")
