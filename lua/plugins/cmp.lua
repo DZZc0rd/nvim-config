@@ -7,6 +7,11 @@ return {
         "hrsh7th/cmp-cmdline",
         "L3MON4D3/LuaSnip",
         "saadparwaiz1/cmp_luasnip",
+        {
+            "folke/lazydev.nvim",
+            ft = "lua",
+            opts = {},
+        },
     },
     event = { "InsertEnter", "CmdlineEnter" },
     config = function()
@@ -33,6 +38,7 @@ return {
                 documentation = cmp.config.window.bordered(),
             },
             sources = cmp.config.sources({
+                { name = "lazydev" },
                 { name = "nvim_lsp" },
                 { name = "luasnip" },
                 { name = "path" },
