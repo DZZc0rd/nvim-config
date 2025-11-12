@@ -44,6 +44,14 @@ return {
                         require("fzf-lua").live_grep()
                     end,
                 },
+                {
+                    icon = "󰈆",
+                    text = "Exit from Neovim",
+                    shortcut = "q",
+                    callback = function()
+                        vim.cmd("q")
+                    end,
+                },
             }),
             builtin.sections.oldfiles(),
         }
