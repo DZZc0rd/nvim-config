@@ -33,7 +33,7 @@ return {
                     text = "Find file",
                     shortcut = "f",
                     callback = function()
-                        require("fzf-lua").files()
+                        fzf.files()
                     end,
                 },
                 {
@@ -41,7 +41,7 @@ return {
                     text = "Find string",
                     shortcut = "s",
                     callback = function()
-                        require("fzf-lua").live_grep()
+                        fzf.live_grep()
                     end,
                 },
                 {
