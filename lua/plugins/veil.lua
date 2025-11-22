@@ -61,6 +61,6 @@ return {
             sections = sections,
         }
 
-        require("veil").setup(opts)
+        return opts
     end,
 }
