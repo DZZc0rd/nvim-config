@@ -5,16 +5,20 @@ return {
         { "<leader>ee", "<cmd>Fyler<cr>", desc = "Open file explorer" },
     },
     opts = {
-        default_explorer = true,
-        win = {
-            border = "single",
-            kind = "float",
-            kind_presets = {
-                float = {
-                    width = "0.24rel",
-                    height = "1rel",
-                    top = "1abs",
-                    left = "1abs",
+        views = {
+            finder = {
+                default_explorer = true,
+                win = {
+                    border = "single",
+                    kind = "float",
+                    kinds = {
+                        float = {
+                            width = "24%",
+                            height = "100%",
+                            top = "1",
+                            left = "1",
+                        },
+                    },
                 },
             },
         },
