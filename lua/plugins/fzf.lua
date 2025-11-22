@@ -9,7 +9,7 @@ return {
         winopts = {
             border = "single",
             preview = {
-                border = "double",
+                border = "single",
             },
         },
     },
