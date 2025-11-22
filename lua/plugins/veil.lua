@@ -6,8 +6,10 @@ return {
         "A7Lavinraj/fyler.nvim",
     },
     lazy = false,
-    opts = function()
+    config = function()
+        local veil = require("veil")
         local builtin = require("veil.builtin")
+
         local fzf = require("fzf-lua")
 
         local header = builtin.sections.animated(builtin.headers.frames_nvim, {})
@@ -61,6 +63,9 @@ return {
             sections = sections,
         }
 
-        return opts
+        veil.setup(opts)
+        veil.map("f", function()
+            fzf.files()
+        end)
     end,
 }
