@@ -8,6 +8,9 @@ return {
         views = {
             finder = {
                 default_explorer = true,
+                indentscope = {
+                    marker = "┊",
+                },
                 win = {
                     border = "single",
                     kind = "float",
