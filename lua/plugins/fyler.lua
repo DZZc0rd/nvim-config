@@ -19,6 +19,10 @@ return {
                             left = "1",
                         },
                     },
+                    win_opts = {
+                        cursorline = true,
+                        foldcolumn = "2",
+                    },
                 },
             },
         },
