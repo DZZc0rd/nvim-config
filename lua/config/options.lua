@@ -21,3 +21,6 @@ vim.opt.background = "dark"
 vim.opt.cursorline = true
 
 vim.opt.clipboard:append("unnamedplus")
+
+vim.opt.exrc = true
+vim.opt.secure = true
