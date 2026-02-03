@@ -9,7 +9,9 @@ return {
             finder = {
                 default_explorer = true,
                 indentscope = {
-                    marker = "┊",
+                    markers = {
+                        { "┊", "FylerIndentMarker" },
+                    },
                 },
                 win = {
                     border = "single",
