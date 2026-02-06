@@ -1,23 +1,3 @@
--- return {
---     "hrsh7th/nvim-cmp",
---     dependencies = {
---         "hrsh7th/cmp-nvim-lsp",
---         "hrsh7th/cmp-buffer",
---         "hrsh7th/cmp-path",
---         "hrsh7th/cmp-cmdline",
---         "L3MON4D3/LuaSnip",
---         "saadparwaiz1/cmp_luasnip",
---         {
---             "folke/lazydev.nvim",
---             ft = "lua",
---             opts = {},
---         },
---     },
---     event = { "InsertEnter", "CmdlineEnter" },
---     config = function()
---     end,
--- }
-
 local cmp = require("cmp")
 local luasnip = require("luasnip")
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
