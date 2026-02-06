@@ -8,25 +8,17 @@ local function source_matugen()
     else
         file:close()
         dofile(matugen_path)
-
-        require("lazy.core.loader").reload("lualine.nvim")
     end
 end
 
-return {
-    "RRethy/base16-nvim",
-    event = "VeryLazy",
-    config = function()
-        require("base16-colorscheme").with_config({
-            notify = true,
-        })
+require("base16-colorscheme").with_config({
+    notify = true,
+})
 
+source_matugen()
+vim.api.nvim_create_autocmd("Signal", {
+    pattern = "SIGUSR1",
+    callback = function()
         source_matugen()
-        vim.api.nvim_create_autocmd("Signal", {
-            pattern = "SIGUSR1",
-            callback = function()
-                source_matugen()
-            end,
-        })
     end,
-}
+})
