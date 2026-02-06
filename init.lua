@@ -4,3 +4,4 @@ require("config.lsp")
 
 require("plugins.fyler")
 require("plugins.which-key")
+require("plugins.fzf")
