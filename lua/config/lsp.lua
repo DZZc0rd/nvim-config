@@ -3,10 +3,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     callback = function(args)
         local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
 
-        if client:supports_method("textDocument/completion") then
-            vim.lsp.completion.enable(true, client.id, args.buf)
-        end
-
         if
             not client:supports_method("textDocument/willSaveWaitUntil")
             and client:supports_method("textDocument/formatting")
@@ -20,6 +16,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
             })
         end
     end,
+})
+
+vim.diagnostic.config({
+    virtual_lines = true,
+    update_in_insert = true,
+    severity_sort = true,
 })
 
 vim.lsp.config["nixd"] = {
@@ -41,5 +43,7 @@ vim.lsp.config["nixd"] = {
     },
 }
 
-vim.lsp.enable("nixd")
-vim.lsp.enable("statix")
+vim.lsp.enable({
+    "nixd",
+    "statix",
+})
