@@ -43,6 +43,11 @@ vim.lsp.config["nixd"] = {
     },
 }
 
+local cmp_capabilites = require("cmp_nvim_lsp").default_capabilities()
+vim.lsp.config("*", {
+    capabilities = cmp_capabilites,
+})
+
 vim.lsp.enable({
     "nixd",
     "statix",
