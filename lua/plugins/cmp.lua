@@ -35,8 +35,10 @@ cmp.setup({
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
     },
+    experimental = {
+        ghost_text = true,
+    },
     sources = cmp.config.sources({
-        { name = "lazydev" },
         { name = "nvim_lsp" },
         { name = "luasnip" },
         { name = "path" },
