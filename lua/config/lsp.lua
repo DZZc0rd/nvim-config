@@ -51,4 +51,6 @@ vim.lsp.config("*", {
 vim.lsp.enable({
     "nixd",
     "statix",
+    "lua_ls",
+    "stylua",
 })
