@@ -5,6 +5,7 @@ require("noice").setup({
                 row = 2,
                 col = "50%",
             },
+            border = { style = "single" },
         },
     },
 })
