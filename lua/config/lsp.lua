@@ -53,4 +53,7 @@ vim.lsp.enable({
     "statix",
     "lua_ls",
     "stylua",
+    "rust_analyzer",
+    "ts_ls",
+    "emmet_language_server",
 })
