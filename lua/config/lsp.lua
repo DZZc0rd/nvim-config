@@ -38,6 +38,7 @@ vim.lsp.config["nixd"] = {
                     expr =
                     "(builtins.getFlake (toString ./.)).nixosConfigurations.desktop.options.home-manager.users.type.getSubOptions []",
                 },
+                ["flake-parts"] = { expr = "(builtins.getFlake (toString ./.)).debug.options" },
             },
         },
     },
