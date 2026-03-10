@@ -17,9 +17,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in rec {
       neovim = mnw.lib.wrap pkgs {
-        initLua = ''
-          require("init")
-        '';
+        luaFiles = [./init.lua];
 
         plugins = {
           dev.config.pure = ./.;
